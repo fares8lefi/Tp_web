@@ -1,0 +1,12 @@
+
+{% if authors is empty %}
+    <p>aucun user trouvé.</p>
+{% else %}
+    
+{% for user in authors %}
+    <p><img src="{{ asset(user.picture) }}" alt="User image"/></p>
+    <p> username : {{ user.username }}</p>
+    <p> user email :{{ user.email }}</p>
+    <p> nombre de books{{user.nb_books}}</p>
+{% endfor %}
+{% endif %}
